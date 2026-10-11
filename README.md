@@ -5,21 +5,19 @@
 > This mod does not attempt to evade any such checks and may get flagged.
 
 An all-in-one performance mod for BTD6 I wrote for my friend. Developed by marking native hot-path functions with hooks
-to develop a quasi-profiler and timing them, afterwards developing patches for expensive subroutines.
+to develop a quasi-profiler and timing them, afterward developing patches for expensive subroutines.  
 
+#### Room for improvement
+
+Waiting 2-3 hours for each profiling session makes it difficult to curate significant performance improvements and most experimental patches were difficult to make significant. Making some routines (i.e `Scene`, `CollisionChecker` & `ProcessRootObject`) multi-threaded would lead to a worthwhile speed boost however it is hard to maintain behaviour.  
+  
 ## Installation
 
-Download `BTD6-Patches.dll` and `BTD6-Patches.json` from this repository's Releases page.
-
-Download MelonLoader ([https://github.com/lavagang/melonloader](https://github.com/lavagang/melonloader)) onto BTD6 and move the dll into Mods and the json into UserData.
+Download `BTD6-Patches.dll` and `BTD6-Patches.json` from this repository's Releases page, then download [MelonLoader](https://github.com/lavagang/melonloader) onto BTD6 and move the dll into Mods and the json into UserData.
 
 ## Timings
 
 Before → after, per call unless stated otherwise.
-
-Latest build (v0.8.6):
-
-- Zoned `Run`, one million passes with 16 objects each: **~54 ms → ~48 ms**
 
 Earlier measurements across previous builds; not all apply to the current game version:
 
@@ -40,6 +38,7 @@ Earlier measurements across previous builds; not all apply to the current game v
 - Model display-space conversion: **7.33 ns → 2.70 ns**
 - Buff mutation membership lookup: **12.76 ns → 8.26 ns**
 - Collision grid X/Y coordinate block: **5.30 ns → 3.31 ns**
+- Zoned `Run`, one million passes with 16 objects each: **~54 ms → ~48 ms**
 
 Collision callbacks:
 
