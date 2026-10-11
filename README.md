@@ -13,7 +13,7 @@ Waiting 2-3 hours for each profiling session makes it difficult to curate signif
   
 ## Installation
 
-Download `BTD6-Patches.dll` and `BTD6-Patches.json` from this repository's Releases page, then download [MelonLoader](https://github.com/lavagang/melonloader) onto BTD6 and move the dll into Mods and the json into UserData.
+Download `BTD6-Patches.dll` and `BTD6-Patches.json` from this repository's Releases page, then download [MelonLoader](https://github.com/lavagang/melonloader) onto BTD6 and move the `.dll` into Mods and the `.json` into UserData.
 
 ## Timings
 
@@ -94,3 +94,9 @@ Experimental parallel lineage search (disabled; history size):
 - 262,144, last match: **232.357 µs → 148.596 µs**
 
 Only measured changes are listed.
+
+## Silly flame graphs
+
+<img width="2442" height="368" alt="image" src="https://github.com/user-attachments/assets/e0445a1a-d6d1-415d-b1c7-d9f5cc602c75" />
+<img width="2441" height="372" alt="image" src="https://github.com/user-attachments/assets/d319eae9-b596-40d4-8a03-1dbfcbf15fc6" />
+
