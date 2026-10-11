@@ -1,0 +1,10 @@
+**/bin/
+**/obj/
+.vs/
+.idea/
+*.user
+*.suo
+*.log
+.DS_Store
+Thumbs.db
+Desktop.ini

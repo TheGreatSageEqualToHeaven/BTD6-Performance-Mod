@@ -1,0 +1,80 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AssemblyName>BTD6-Patches</AssemblyName>
+        <RootNamespace>Btd6Patches</RootNamespace>
+        <Version>0.8.6</Version>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <GameDirectory Condition="'$(GameDirectory)' == ''">$(MSBuildProgramFiles32)\Steam\steamapps\common\BloonsTD6</GameDirectory>
+        <GameAssemblies>$(GameDirectory)\MelonLoader\Il2CppAssemblies</GameAssemblies>
+        <NativeBuildDirectory>$(MSBuildProjectDirectory)\obj\$(Configuration)\$(TargetFramework)\native</NativeBuildDirectory>
+        <NativeLibraryPath>$(NativeBuildDirectory)\BTD6-Patches.Native.dll</NativeLibraryPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="LavaGang.MelonLoader" Version="0.7.2"/>
+        <PackageReference Include="HarmonyX" Version="2.10.2"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="UnityEngine.CoreModule;Assembly-CSharp;Il2Cppmscorlib">
+            <HintPath>$(GameAssemblies)\%(Identity).dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Update="UnityEngine.CoreModule">
+            <Aliases>GameUnity</Aliases>
+        </Reference>
+        <Reference Update="Il2Cppmscorlib">
+            <Aliases>GameCorlib</Aliases>
+        </Reference>
+        <Reference Include="Il2CppInterop.Runtime">
+            <HintPath>$(GameDirectory)\MelonLoader\net6\Il2CppInterop.Runtime.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Update="src\Errors.resx">
+            <ManifestResourceName>Btd6Patches.Errors</ManifestResourceName>
+            <StronglyTypedLanguage>C#</StronglyTypedLanguage>
+            <StronglyTypedNamespace>Btd6Patches</StronglyTypedNamespace>
+            <StronglyTypedClassName>Errors</StronglyTypedClassName>
+            <StronglyTypedFileName>$(IntermediateOutputPath)Errors.g.cs</StronglyTypedFileName>
+        </EmbeddedResource>
+        <EmbeddedResource Include="$(NativeLibraryPath)" LogicalName="Btd6Patches.native.dll"/>
+        <Compile Include="src\**\*.cs"/>
+        <Compile Include="$(IntermediateOutputPath)Errors.g.cs"
+                 Condition="'$(DesignTimeBuild)' == 'true' and Exists('$(IntermediateOutputPath)Errors.g.cs')"/>
+        <NativeSource Include="native\patches.c"/>
+        <FileWrites
+                Include="$(NativeLibraryPath);$(NativeBuildDirectory)\patches.obj;$(NativeBuildDirectory)\patches.lib;$(NativeBuildDirectory)\patches.exp"/>
+    </ItemGroup>
+
+    <Target Name="BuildNativeLibrary" BeforeTargets="PrepareForBuild"
+            Inputs="@(NativeSource);$(MSBuildProjectFullPath)" Outputs="$(NativeLibraryPath)"
+            Condition="'$(DesignTimeBuild)' != 'true'">
+        <Error Condition="'$(OS)' != 'Windows_NT'" Text="The native helper requires Windows and MSVC x64 build tools."/>
+        <PropertyGroup>
+            <VsWhere>$(MSBuildProgramFiles32)\Microsoft Visual Studio\Installer\vswhere.exe</VsWhere>
+        </PropertyGroup>
+        <Error Condition="!Exists('$(VsWhere)')" Text="Visual Studio Installer and MSVC x64 build tools are required."/>
+        <Exec
+                Command="&quot;$(VsWhere)&quot; -latest -products * -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath"
+                ConsoleToMSBuild="true" StandardOutputImportance="Low">
+            <Output TaskParameter="ConsoleOutput" ItemName="VisualStudioPath"/>
+        </Exec>
+        <PropertyGroup>
+            <NativeVcVars>@(VisualStudioPath)\VC\Auxiliary\Build\vcvars64.bat</NativeVcVars>
+        </PropertyGroup>
+        <Error Condition="!Exists('$(NativeVcVars)')" Text="MSVC x64 build tools are unavailable."/>
+        <MakeDir Directories="$(NativeBuildDirectory)"/>
+        <Exec WorkingDirectory="$(NativeBuildDirectory)"
+              Command="call &quot;$(NativeVcVars)&quot; &gt;nul &amp;&amp; cl /nologo /std:c11 /O2 /W4 /WX /LD /MT &quot;$(MSBuildProjectDirectory)\native\patches.c&quot; /Fopatches.obj /link /OUT:BTD6-Patches.Native.dll /IMPLIB:patches.lib"/>
+    </Target>
+</Project>

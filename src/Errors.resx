@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <data name="AdaptiveLineageIndexSkipped" xml:space="preserve">
+    <value>Adaptive Lineage Index skipped: </value>
+  </data>
+    <data name="AddressOutsideInspectedGameModule" xml:space="preserve">
+    <value>Address outside GameAssembly.</value>
+  </data>
+    <data name="BananaCentralBuffReuseHookFailed" xml:space="preserve">
+    <value>Banana Central buff reuse hook failed.</value>
+  </data>
+    <data name="BananaCentralNativeTypeUnavailable" xml:space="preserve">
+    <value>Banana Central native type unavailable.</value>
+  </data>
+    <data name="BuffReuseHookStillAttached" xml:space="preserve">
+    <value>Buff reuse hook still attached.</value>
+  </data>
+    <data name="CallbackDispatchStartChanged" xml:space="preserve">
+    <value>Callback dispatch start changed.</value>
+  </data>
+    <data name="CallbackDispatchWindowChanged" xml:space="preserve">
+    <value>Callback dispatch window changed.</value>
+  </data>
+    <data name="CallSiteChangedBeforePatchApplication" xml:space="preserve">
+    <value>Call site changed before patch application.</value>
+  </data>
+    <data name="CallSiteOwnedByAnotherPatch" xml:space="preserve">
+    <value>Call site changed by another patch; left attached.</value>
+  </data>
+    <data name="CollisionAccessorTypesUnavailable" xml:space="preserve">
+    <value>Collision accessor types unavailable.</value>
+  </data>
+    <data name="ConflictingNativeArgumentSetup" xml:space="preserve">
+    <value>Conflicting native argument setup.</value>
+  </data>
+    <data name="ConstantsInitializationNotProven" xml:space="preserve">
+    <value>Constants initialization check failed.</value>
+  </data>
+    <data name="ConstantsNativeClassUnavailable" xml:space="preserve">
+    <value>Constants native class unavailable.</value>
+  </data>
+    <data name="CurrentCollisionTypesUnavailable" xml:space="preserve">
+    <value>Collision types unavailable.</value>
+  </data>
+    <data name="CurrentScopedIteratorClassesUnavailable" xml:space="preserve">
+    <value>Scoped iterator classes unavailable.</value>
+  </data>
+    <data name="DetourRemainsActiveKeepingItsCodeAlive" xml:space="preserve">
+    <value>Detour still attached; code retained.</value>
+  </data>
+    <data name="DisabledTargetsMustBeAnArray" xml:space="preserve">
+    <value>DisabledTargets must be an array.</value>
+  </data>
+    <data name="ExpectedAllocationCALL" xml:space="preserve">
+    <value>Expected allocation CALL.</value>
+  </data>
+    <data name="ExpectedNativeCALL" xml:space="preserve">
+    <value>Expected native CALL.</value>
+  </data>
+    <data name="ExpectedNativeTailJMP" xml:space="preserve">
+    <value>Expected native tail JMP.</value>
+  </data>
+    <data name="ExperimentalGCScheduleOutsideSupportedBounds" xml:space="preserve">
+    <value>Invalid GC schedule.</value>
+  </data>
+    <data name="InvalidCallSiteReplacementLength" xml:space="preserve">
+    <value>Call-site replacement must be five bytes.</value>
+  </data>
+    <data name="GameAssemblyPathUnavailable" xml:space="preserve">
+    <value>GameAssembly.dll path unavailable.</value>
+  </data>
+    <data name="GCMeasurementsMustBeFiniteAndNonnegative" xml:space="preserve">
+    <value>GC measurements must be finite and nonnegative.</value>
+  </data>
+    <data name="GeometryInitializationNotProven" xml:space="preserve">
+    <value>Geometry initialization check failed.</value>
+  </data>
+    <data name="GeometryMetadataUnavailable" xml:space="preserve">
+    <value>Geometry metadata unavailable.</value>
+  </data>
+    <data name="GridCoordinateSitesChanged" xml:space="preserve">
+    <value>Grid coordinate sites changed.</value>
+  </data>
+    <data name="GridPositionCallerChanged" xml:space="preserve">
+    <value>Grid position caller changed.</value>
+  </data>
+    <data name="GridPositionCoordinateCalleeChanged" xml:space="preserve">
+    <value>Grid position coordinate callee changed.</value>
+  </data>
+    <data name="GridPositionHelperContractChanged" xml:space="preserve">
+    <value>Grid position helper contract changed.</value>
+  </data>
+    <data name="HelperChangedOrHooked" xml:space="preserve">
+    <value>Helper {0} changed or hooked.</value>
+  </data>
+    <data name="IdleGarbageCollectionDisabledAfterError" xml:space="preserve">
+    <value>Idle GC disabled: {0}</value>
+  </data>
+    <data name="InactiveBuffInstructionBlockContinuationsChanged" xml:space="preserve">
+    <value>Inactive buff instructions or branch targets changed.</value>
+  </data>
+    <data name="IndexedSearchRequiresActiveLineageIntersection" xml:space="preserve">
+    <value>Indexed search requires active lineage intersection.</value>
+  </data>
+    <data name="InvalidInitializationGateCount" xml:space="preserve">
+    <value>Invalid initialization gate count.</value>
+  </data>
+    <data name="InvalidNativePatchRange" xml:space="preserve">
+    <value>Invalid native patch range.</value>
+  </data>
+    <data name="LineageHookFailed" xml:space="preserve">
+    <value>Lineage hook failed.</value>
+  </data>
+    <data name="LineageHookRemainsAttached" xml:space="preserve">
+    <value>Lineage hook remains attached.</value>
+  </data>
+    <data name="NativeBlockBoundaryMismatch" xml:space="preserve">
+    <value>Native block boundary mismatch.</value>
+  </data>
+    <data name="NativeBlockChangedOrHooked" xml:space="preserve">
+    <value>Native block changed or hooked.</value>
+  </data>
+    <data name="NativeCallerHelperChangedAt" xml:space="preserve">
+    <value>Native caller or helper changed at </value>
+  </data>
+    <data name="NativeEntryPointDiffersFromInspectedMethod" xml:space="preserve">
+    <value>Native method address mismatch.</value>
+  </data>
+    <data name="NativeHelperResourceMissing" xml:space="preserve">
+    <value>Native helper resource missing.</value>
+  </data>
+    <data name="NativeHookDidNotAttach" xml:space="preserve">
+    <value>Native hook did not attach.</value>
+  </data>
+    <data name="NativeMethodBodyChangedOrAlreadyHooked" xml:space="preserve">
+    <value>Native method changed or hooked.</value>
+  </data>
+    <data name="NativeMethodInfoUnavailable" xml:space="preserve">
+    <value>Native MethodInfo unavailable.</value>
+  </data>
+    <data name="NativePathComparerTypeUnavailable" xml:space="preserve">
+    <value>Native path comparer type unavailable.</value>
+  </data>
+    <data name="NativeReturnSetupExceedsBlock" xml:space="preserve">
+    <value>Native return setup exceeds block.</value>
+  </data>
+    <data name="SharedEmptyEnumeratorUnavailable" xml:space="preserve">
+    <value>Shared empty enumerator unavailable for {0}.</value>
+  </data>
+    <data name="NativeStringTypeUnavailable" xml:space="preserve">
+    <value>Native string type unavailable.</value>
+  </data>
+    <data name="DiscountConsumerRequired" xml:space="preserve">
+    <value>Zone pooling requires the scoped discount consumer.</value>
+  </data>
+    <data name="PatchConfigurationMustBeAnObject" xml:space="preserve">
+    <value>Patch configuration must be an object.</value>
+  </data>
+    <data name="PatchDetachFailed" xml:space="preserve">
+    <value>Patch detach failed: </value>
+  </data>
+    <data name="UnsupportedPlatform" xml:space="preserve">
+    <value>Windows x64 required.</value>
+  </data>
+    <data name="PatchSetupFailed" xml:space="preserve">
+    <value>Patch setup failed: {0}</value>
+  </data>
+    <data name="ProjectileTimerInterfaceUnavailable" xml:space="preserve">
+    <value>Projectile timer interface unavailable.</value>
+  </data>
+    <data name="ReplacementElementTypeMismatch" xml:space="preserve">
+    <value>Replacement element type mismatch.</value>
+  </data>
+    <data name="RequiresActiveGuardedBuffRebuildReuse" xml:space="preserve">
+    <value>Buff Rebuild Reuse must be active.</value>
+  </data>
+    <data name="RequiresActiveGuardedScopedBuffIteratorPooling" xml:space="preserve">
+    <value>Scoped buff iterator pooling must be active.</value>
+  </data>
+    <data name="RequiresGuardedBuffRebuildReuse" xml:space="preserve">
+    <value>Buff Rebuild Reuse must be active.</value>
+  </data>
+    <data name="RetirementSettingsOutsideSupportedBounds" xml:space="preserve">
+    <value>Invalid retirement settings.</value>
+  </data>
+    <data name="RetirementWorkerCouldNotStart" xml:space="preserve">
+    <value>Retirement worker could not start.</value>
+  </data>
+    <data name="RoundEndScopeHookFailed" xml:space="preserve">
+    <value>Round-end scope hook failed.</value>
+  </data>
+    <data name="RoundEndScopeStillAttached" xml:space="preserve">
+    <value>Round-end scope still attached.</value>
+  </data>
+    <data name="RoundObjectRetirementDisabledAfterError" xml:space="preserve">
+    <value>Round Object Retirement disabled: </value>
+  </data>
+    <data name="RetirementRequiresBuffPooling" xml:space="preserve">
+    <value>Round retirement requires scoped buff iterator pooling.</value>
+  </data>
+    <data name="PatchSkipped" xml:space="preserve">
+    <value>{0} skipped: {1}</value>
+  </data>
+    <data name="SnapshotArrayEnumerableTypesUnavailable" xml:space="preserve">
+    <value>Snapshot array or enumerable type unavailable.</value>
+  </data>
+    <data name="StraightMovementVirtualPositionCallsChanged" xml:space="preserve">
+    <value>Straight movement position calls changed.</value>
+  </data>
+    <data name="TruncatedAchievementCounter" xml:space="preserve">
+    <value>Truncated achievement counter.</value>
+  </data>
+    <data name="TruncatedComparerBody" xml:space="preserve">
+    <value>Truncated comparer body.</value>
+  </data>
+    <data name="UnexpectedCallSiteDestination" xml:space="preserve">
+    <value>Unexpected call-site destination.</value>
+  </data>
+    <data name="UnexpectedCollisionCallbackReceiverWindow" xml:space="preserve">
+    <value>Unexpected collision callback receiver or instructions.</value>
+  </data>
+    <data name="UnexpectedCollisionInitializationGates" xml:space="preserve">
+    <value>Unexpected collision initialization gates.</value>
+  </data>
+    <data name="UnexpectedCollisionIteratorSignature" xml:space="preserve">
+    <value>Unexpected collision iterator signature.</value>
+  </data>
+    <data name="UnexpectedInactiveIconBlockLength" xml:space="preserve">
+    <value>Unexpected inactive icon block length.</value>
+  </data>
+    <data name="UnexpectedInterfaceDispatchSite" xml:space="preserve">
+    <value>Unexpected interface dispatch site.</value>
+  </data>
+    <data name="UnexpectedNativeMethodSignature" xml:space="preserve">
+    <value>Unexpected native method signature.</value>
+  </data>
+    <data name="UnexpectedNativePatchContractType" xml:space="preserve">
+    <value>Wrong native contract type: </value>
+  </data>
+    <data name="UnexpectedOrOverlappingInitializationGate" xml:space="preserve">
+    <value>Unexpected or overlapping initialization gate.</value>
+  </data>
+    <data name="UnexpectedReplacementMethodSignature" xml:space="preserve">
+    <value>Unexpected replacement method signature.</value>
+  </data>
+    <data name="UnexpectedSelectorAllocationBlock" xml:space="preserve">
+    <value>Unexpected selector allocation block.</value>
+  </data>
+    <data name="UnexpectedStrengthSelectorSignature" xml:space="preserve">
+    <value>Unexpected strength selector signature.</value>
+  </data>
+    <data name="UnknownNativePatchContract" xml:space="preserve">
+    <value>Unknown native patch contract: </value>
+  </data>
+    <data name="UnsupportedGameBinaryNoPatchesApplied" xml:space="preserve">
+    <value>Unsupported game build; no patches applied.</value>
+  </data>
+    <data name="UnsupportedNativeGCHandleABI" xml:space="preserve">
+    <value>Unsupported GC handle ABI: </value>
+  </data>
+    <data name="UnsupportedReceiverRegister" xml:space="preserve">
+    <value>Unsupported receiver register.</value>
+  </data>
+    <data name="UnsupportedRuntimeThreadAPI" xml:space="preserve">
+    <value>Unsupported runtime thread API: </value>
+  </data>
+    <data name="UnverifiedDefaultStringComparer" xml:space="preserve">
+    <value>Unsupported default string comparer: </value>
+  </data>
+    <data name="Vector3InitializationNotProven" xml:space="preserve">
+    <value>Vector3 initialization check failed.</value>
+  </data>
+    <data name="Vector3MetadataUnavailable" xml:space="preserve">
+    <value>Vector3 metadata unavailable.</value>
+  </data>
+</root>
